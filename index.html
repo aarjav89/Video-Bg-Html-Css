@@ -6,12 +6,12 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-   <section class="showcase"> <!-- main content area -->
+   <section class="showcase active"> <!-- main content area -->
        <header>
            <h2 class="logo">
                Travel
            </h2>
-           <div class="toggle"> <!-- right side drawer for menu -->
+           <div class="toggle active"> <!-- right side drawer for menu -->
 
            </div>
        </header>
@@ -27,25 +27,36 @@
            <p>
                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur corporis, dicta dolorum esse eum nesciunt non numquam pariatur possimus sit.
            </p>
+           <a href="#">Explore</a>
        </div>
 
        <ul class="social">
-           <li> <img src="facebook.png" alt="fb"> </li>
-           <li> <img src="instagram.png" alt="insta"> </li>
-           <li> <img src="twitter.png" alt="twitter"> </li>
+           <li> <a href="#"> <img src="facebook.png" alt="fb"></a> </li>
+           <li> <a href="#"> <img src="instagram.png" alt="insta"></a> </li>
+           <li> <a href="#"> <img src="twitter.png" alt="twitter"> </a></li>
        </ul>
-
-       <div class="menu">
-           <ul>
-               <li> <a href="#">Home </a></li>
-               <li> <a href="#">About </a></li>
-               <li> <a href="#">News </a></li>
-               <li> <a href="#">Shop </a></li>
-               <li> <a href="#">Contact Us </a></li>
-
-
-           </ul>
-       </div>
    </section>
+
+   <div class="menu">
+       <ul>
+           <li> <a href="#">Home </a></li>
+           <li> <a href="#">About </a></li>
+           <li> <a href="#">News </a></li>
+           <li> <a href="#">Shop </a></li>
+           <li> <a href="#">Contact Us </a></li>
+       </ul>
+   </div>
+
+<script>
+    const menuToggle = document.querySelector('.toggle') //selecting the class toggle
+    const showcaseToggle = document.querySelector('.showcase') // selecting the class showcase
+
+    menuToggle.addEventListener('click', () => {
+        menuToggle.classList.toggle('active')
+        showcaseToggle.classList.toggle('active')
+    })
+
+</script>
+
 </body>
 </html>
